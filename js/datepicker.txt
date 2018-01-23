@@ -1,0 +1,25 @@
+  <!------------Including jQuery Date UI with CSS-------------->
+   <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+   <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+   <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+   <!-- jQuery Code executes on Date Format option ----->
+   <script>
+   
+		$(document).ready(function(){
+		
+			  // init	
+			  $( "#datepicker" ).datepicker();
+			  
+			  // fortmat
+			  $( "#datepicker" ).datepicker( "option", "dateFormat", 'dd/mm/yy');
+			  
+			  // onchange
+			  $( "#datepicker" ).datepicker( "option", "onSelect", function(){
+					console.log(1);
+					$( "#datepicker" ).datepicker( "option", "disabled", true);
+			  });
+			  
+			  // disabled
+			  $( "#datepicker" ).datepicker( "option", "disabled", false);		  
+		});  
+   </script>
